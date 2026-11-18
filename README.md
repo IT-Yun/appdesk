@@ -29,4 +29,15 @@ The app ID and request ID travel with the message. They keep conversations separ
 
 See [AppDeskProtocol.swift](AppDeskProtocol.swift) for how a message identifies its app, request and checks. This source module is an excerpt from the application.
 
+## Try a message round trip
+
+Use Swift 6 to run the original message model and merge logic with a fictional request. The example deliberately delivers the same receipt twice. The conversation still contains one request and its reply.
+
+```sh
+swiftc AppDeskProtocol.swift Example.swift -o /tmp/appdesk-example
+/tmp/appdesk-example
+```
+
+The live client uses SwiftUI and URLSession. This example exercises the delivery logic locally and does not require a relay account.
+
 [Back to the project index](https://github.com/IT-Yun/IT-Yun)
